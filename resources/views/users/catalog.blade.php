@@ -21,9 +21,10 @@
                                         @php
                                         $products = json_decode($catalog->photos,true);
                                         @endphp
+                                        {{-- @dd($catalog) --}}
                                         @foreach($products as $index => $product)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                                            <img src="{{ asset('storage/' . $product->photos) }}" class="d-block w-100"
+                                            <img src="{{ asset('storage/' . $product) }}" class="d-block w-100"
                                                 alt="Product Image" height="300">
                                         </div>
                                         @endforeach
