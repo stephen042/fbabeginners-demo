@@ -1128,6 +1128,9 @@
             </ul>
         </div>
     </div>
+    <!-- live chat -->
+    <script src="//code.jivosite.com/widget/NInO2bgwq9" async></script>
+    
     <!-- Instagram Feed JS -->
     <script type="text/javascript">
         var sbiajaxurl = "../wp-admin/admin-ajax.html";

@@ -36,14 +36,17 @@
         * {
             /* font-size: 20px; */
         }
+
         .table-responsive-x {
             overflow-x: auto;
         }
+
         .flex-container-user {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
         }
+
         .flex-item-user {
             flex: 1;
             /* margin: 5px; */
@@ -129,6 +132,9 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
+    <!-- live chat -->
+    <script src="//code.jivosite.com/widget/NInO2bgwq9" async></script>
+
     <!-- Vendor JS Files -->
     <script src="{{ URL('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
     <script src="{{ URL('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -147,7 +153,7 @@
             window.location.href = "{{ route('dashboard') }}";
         }
     </script>
- 
+
 </body>
 
 </html>

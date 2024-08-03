@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="xmlrpc.php">
-    <link href="{{ asset('homeAssets/wp-content/uploads/2021/02/BeginnersFba.png') }}" rel="shortcut icon" type="image/x-icon">
+    <link href="{{ asset('homeAssets/wp-content/uploads/2021/02/BeginnersFba.png') }}" rel="shortcut icon"
+        type="image/x-icon">
 
     <script>
         (function (html) {
@@ -35,7 +36,7 @@
     <meta name="twitter:label1" content="Est. reading time">
     <meta name="twitter:data1" content="7 minutes">
     <script type="application/ld+json" class="yoast-schema-graph">
-            {
+        {
                 "@context": "https://schema.org",
                 "@graph": [
                     {
@@ -94,7 +95,7 @@
                     { "@type": "BreadcrumbList", "@id": "https://beginnersfba.online/#breadcrumb", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home" }] }
                 ]
             }
-        </script>
+    </script>
     <!-- / Yoast SEO plugin. -->
 
     <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
@@ -179,7 +180,8 @@
         }
     </style>
     <link rel="stylesheet" id="sb_instagram_styles-css"
-        href="homeAssets/wp-content/plugins/instagram-feed/css/sbi-styles.min9361.css?ver=2.9.10" type="text/css" media="all">
+        href="homeAssets/wp-content/plugins/instagram-feed/css/sbi-styles.min9361.css?ver=2.9.10" type="text/css"
+        media="all">
     <link rel="stylesheet" id="wp-block-library-css"
         href="homeAssets/wp-includes/css/dist/block-library/style.min74e5.css?ver=5.9.1" type="text/css" media="all">
     <style id="global-styles-inline-css" type="text/css">
@@ -431,16 +433,17 @@
         }
     </style>
     <link rel="stylesheet" id="contact-form-7-css"
-        href="homeAssets/wp-content/plugins/contact-form-7/includes/css/styles7e15.css?ver=5.5.4" type="text/css" media="all">
-    <link rel="stylesheet" id="wpforms-full-css"
-        href="homeAssets/wp-content/plugins/wpforms-lite/assets/css/wpforms-full.mine3d1.css?ver=1.7.2.1" type="text/css"
+        href="homeAssets/wp-content/plugins/contact-form-7/includes/css/styles7e15.css?ver=5.5.4" type="text/css"
         media="all">
+    <link rel="stylesheet" id="wpforms-full-css"
+        href="homeAssets/wp-content/plugins/wpforms-lite/assets/css/wpforms-full.mine3d1.css?ver=1.7.2.1"
+        type="text/css" media="all">
     <link rel="stylesheet" id="flatsome-icons-css"
         href="homeAssets/wp-content/themes/flatsome/assets/css/fl-iconsae34.css?ver=3.12" type="text/css" media="all">
     <link rel="stylesheet" id="flatsome-main-css"
         href="homeAssets/wp-content/themes/flatsome/assets/css/flatsome2916.css?ver=3.13.1" type="text/css" media="all">
-    <link rel="stylesheet" id="flatsome-style-css" href="homeAssets/wp-content/themes/flatsome-child/style6aec.css?ver=3.0"
-        type="text/css" media="all">
+    <link rel="stylesheet" id="flatsome-style-css"
+        href="homeAssets/wp-content/themes/flatsome-child/style6aec.css?ver=3.0" type="text/css" media="all">
     <link rel="stylesheet" id="flatsome-googlefonts-css"
         href="homeAssets/css?family=Raleway%3Aregular%2Cdefault%2C400%7COpen+Sans%3Aregular%2Cdefault%7CDancing+Script%3Aregular%2C400&amp;display=swap&amp;ver=3.9"
         type="text/css" media="all">
@@ -448,7 +451,8 @@
     <!-- Google Analytics snippet added by Site Kit -->
 
     <!-- End Google Analytics snippet added by Site Kit -->
-    <script type="text/javascript" src="homeAssets/wp-includes/js/jquery/jquery.minaf6c.js?ver=3.6.0" id="jquery-core-js"></script>
+    <script type="text/javascript" src="homeAssets/wp-includes/js/jquery/jquery.minaf6c.js?ver=3.6.0"
+        id="jquery-core-js"></script>
     <script type="text/javascript" src="homeAssets/wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2"
         id="jquery-migrate-js"></script>
     <link rel="https://api.w.org/" href="homeAssets/wp-json/index">
@@ -516,8 +520,7 @@
     <link rel="icon" href="homeAssets/wp-content/uploads/2021/02/BeginnersFba-2-100x100.png" sizes="32x32">
     <link rel="icon" href="homeAssets/wp-content/uploads/2021/02/BeginnersFba-2-280x280.png" sizes="192x192">
     <link rel="apple-touch-icon" href="homeAssets/wp-content/uploads/2021/02/BeginnersFba-2-280x280.png">
-    <meta name="msapplication-TileImage"
-        content="homeAssets/wp-content/uploads/2021/02/BeginnersFba-2-280x280.png">
+    <meta name="msapplication-TileImage" content="homeAssets/wp-content/uploads/2021/02/BeginnersFba-2-280x280.png">
     <style id="custom-css" type="text/css">
         :root {
             --primary-color: #00559d;
@@ -974,7 +977,8 @@
         <x-home-footer />
     </div>
     <x-home-script />
- 
+    <!-- live chat -->
+    <script src="//code.jivosite.com/widget/NInO2bgwq9" async></script>
 </body>
 
 </html>
