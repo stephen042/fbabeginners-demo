@@ -46,7 +46,7 @@
                                     <i class="bi bi-currency-dollar"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>${{number_format($total_balance,2) }}</h6>
+                                    <h6>${{format_number_shorthand($total_balance,2) }}</h6>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                                     <i class="bi bi-currency-dollar text-danger"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>- ${{number_format($total_withdrawal,2) }}</h6>
+                                    <h6>- ${{format_number_shorthand($total_withdrawal,2) }}</h6>
                                 </div>
                             </div>
                         </div>
