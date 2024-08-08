@@ -10,6 +10,27 @@ class UploadProduct extends Component
     public $add_products;
     public $user;
 
+    public $quantities = [];
+
+    public function mount()
+    {
+        // Initialize quantities with the current product quantities
+        $this->quantities = $this->add_products->pluck('productQuantity', 'id')->toArray();
+    }
+
+    public function editQuantity($productId)
+    {
+        // Validate the quantity input for the specific product
+        $this->validate([
+            'quantities.' . $productId => 'required|numeric|min:0',
+        ]);
+
+        // Update the product quantity in the database
+        $product = AddProduct::find($productId);
+        $product->productQuantity = $this->quantities[$productId];
+        $product->save();
+    }
+
     public function inStock($id)
     {
         $productData = AddProduct::where("id", "$id")->get()->first();
@@ -71,6 +92,7 @@ class UploadProduct extends Component
 
         return redirect()->route('admin_editUser', [$user->id]);
     }
+
     public function render()
     {
         return view('livewire.admin.upload-product');
