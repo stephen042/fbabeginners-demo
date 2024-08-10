@@ -76,7 +76,6 @@
 
                 @if (   Auth::user()->country == "Pakistan" || 
                         Auth::user()->country == "United Kingdom" || 
-                        Auth::user()->country == "United Kingdom" ||
                         Auth::user()->country == "United States of America" ||
                         Auth::user()->country == "India" ||
                         Auth::user()->country == "United Arab Erimates" ||
