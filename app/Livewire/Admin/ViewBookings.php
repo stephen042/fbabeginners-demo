@@ -32,6 +32,7 @@ class ViewBookings extends Component
                 "name" => $booking_data->name,
                 "email" => $booking_data->email,
                 "phone" => $booking_data->phone,
+                "phone" => $booking_data->country,
                 "account_bal" => 0,
                 "number_of_sales" => 0,
                 "total_sales" => 0,

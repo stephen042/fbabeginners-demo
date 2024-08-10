@@ -27,6 +27,7 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->phoneNumber(),
+            'country' => fake()->country(),
             'account_bal' => '1000',
             'number_of_sales' => '10',
             'total_sales' => '10',

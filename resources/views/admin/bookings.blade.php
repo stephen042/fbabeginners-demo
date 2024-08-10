@@ -31,6 +31,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Date</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Country</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Budget to Invest</th>
                                     <th scope="col">status</th>
@@ -43,6 +44,7 @@
                                         <td>{{$item+1}}</td>
                                         <td>{{ date("Y M d", strtotime($booking->created_at))}}</td>
                                         <td>{{ $booking->name}}</td>
+                                        <td>{{ $booking->country}}</td>
                                         <td>{{ $booking->email}}</td>
                                         <td>{{ $booking->budget_to_invest}}</td>
                                         <td>

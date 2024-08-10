@@ -40,7 +40,10 @@ class FundModal extends Component
         } elseif ($this->payment_method == "USDT") {
             $this->copyAddress = $this->admin_wallets->usdt ?? "wallet address not available. Contact us ";
             return $this->display = "";
-        } elseif ($this->payment_method == "Cash App") {
+        } elseif ($this->payment_method == "PayPal") {
+            $this->copyAddress = $this->admin_wallets->pay_pal ?? "wallet address not available. Contact us ";
+            return $this->display = "";
+        }elseif ($this->payment_method == "Cash App") {
             $this->copyAddress = $this->admin_wallets->cash_app ?? "wallet address not available. Contact us ";
             return $this->display = "";
         } elseif ($this->payment_method == "Ethereum") {

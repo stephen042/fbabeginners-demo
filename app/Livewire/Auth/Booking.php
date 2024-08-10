@@ -12,6 +12,7 @@ class Booking extends Component
     public $name;
     public $email;
     public $phone;
+    public $country;
     public $watch_training_before_applying;
     public $budget_to_invest;
     public $struggle_growing_business;
@@ -26,6 +27,7 @@ class Booking extends Component
             'name' => ['required', 'string', 'max:255', 'min:3'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . Bookings::class],
             'phone' => ['required', 'min:8', 'max:13', 'unique:' . Bookings::class],
+            'country' => ['required'],
             'watch_training_before_applying' => ['required'],
             'budget_to_invest' => ['required'],
             'struggle_growing_business' => ['required', 'max:2000'],
@@ -39,6 +41,7 @@ class Booking extends Component
             "name" => $validated['name'],
             "email" => $validated['email'],
             "phone" => $validated['phone'],
+            "country" => $validated['country'],
             "watch_training_before_applying" => $validated['watch_training_before_applying'],
             "budget_to_invest" => $validated['budget_to_invest'],
             "struggle_growing_business" => $validated['struggle_growing_business'],

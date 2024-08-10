@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone');
+            $table->string('country');
             $table->integer('account_bal')->default(0);
             $table->integer('number_of_sales')->default(0);
             $table->integer('total_sales')->default(0);

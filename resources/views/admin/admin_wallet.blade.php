@@ -31,6 +31,7 @@
                                     <th scope="col">Bitcoin</th>
                                     <th scope="col">USDT</th>
                                     <th scope="col">Ethereum</th>
+                                    <th scope="col">PayPal</th>
                                     <th scope="col">Cash App</th>
                                     <th scope="col">MoneyGram</th>
                                     <th scope="col">Western Unoin</th>
@@ -41,6 +42,7 @@
                                     <td>{{$admin_wallets->bitcoin ?? "empty"}}</td>
                                     <td>{{$admin_wallets->usdt ?? "empty"}}</td>
                                     <td>{{$admin_wallets->ethereum ?? "empty"}}</td>
+                                    <td>{{$admin_wallets->pay_pal ?? "empty"}}</td>
                                     <td>{{$admin_wallets->cash_app ?? "empty"}}</td>
                                     <td>{{$admin_wallets->money_gram ?? "empty"}}</td>
                                     <td>{{$admin_wallets->western_union ?? "empty"}}</td>

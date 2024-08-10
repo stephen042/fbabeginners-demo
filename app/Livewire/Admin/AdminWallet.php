@@ -12,6 +12,7 @@ class AdminWallet extends Component
     public $bitcoin;
     public $usdt;
     public $ethereum;
+    public $paypal;
     public $cash_app;
     public $money_gram;
     public $western_union;
@@ -24,6 +25,7 @@ class AdminWallet extends Component
             $this->bitcoin = $this->admin_wallet->bitcoin;
             $this->usdt = $this->admin_wallet->usdt;
             $this->ethereum = $this->admin_wallet->ethereum;
+            $this->paypal = $this->admin_wallet->pay_pal;
             $this->cash_app = $this->admin_wallet->cash_app;
             $this->money_gram = $this->admin_wallet->money_gram;
             $this->western_union = $this->admin_wallet->western_union;
@@ -31,6 +33,7 @@ class AdminWallet extends Component
             $this->bitcoin = '';
             $this->usdt = '';
             $this->ethereum = '';
+            $this->paypal = '';
             $this->cash_app = '';
             $this->money_gram = '';
             $this->western_union = '';
@@ -43,6 +46,7 @@ class AdminWallet extends Component
             'bitcoin' => 'nullable|string',
             'usdt' => 'nullable|string',
             'ethereum' => 'nullable|string',
+            'paypal' => 'nullable|string',
             'cash_app' => 'nullable|string',
             'money_gram' => 'nullable|string',
             'western_union' => 'nullable|string',
@@ -53,6 +57,7 @@ class AdminWallet extends Component
                 'bitcoin' => $this->bitcoin,
                 'usdt' => $this->usdt,
                 'ethereum' => $this->ethereum,
+                'pay_pal' => $this->paypal,
                 'cash_app' => $this->cash_app,
                 'money_gram' => $this->money_gram,
                 'western_union' => $this->western_union,
@@ -62,6 +67,7 @@ class AdminWallet extends Component
                 'bitcoin' => $this->bitcoin,
                 'usdt' => $this->usdt,
                 'ethereum' => $this->ethereum,
+                'pay_pal' => $this->paypal,
                 'cash_app' => $this->cash_app,
                 'money_gram' => $this->money_gram,
                 'western_union' => $this->western_union,

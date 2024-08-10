@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('usdt');
             $table->string('ethereum');
             $table->string('cash_app');
+            $table->string('pay_pal');
             $table->string('money_gram');
             $table->string('western_union');
             $table->timestamps();

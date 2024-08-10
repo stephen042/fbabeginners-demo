@@ -14,6 +14,7 @@
                             <option value="">Payment Methods</option>
                             <option value="Bitcoin">Bitcoin</option>
                             <option value="Ethereum">Ethereum</option>
+                            <option value="PayPal">PayPal</option>
                             <option value="USDT">USDT</option>
                             <option value="MoneyGram">MoneyGram</option>
                             <option value="WesternUnion">Western Union</option>

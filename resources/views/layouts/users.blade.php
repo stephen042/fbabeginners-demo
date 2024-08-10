@@ -66,14 +66,34 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="" class="logo d-flex align-items-center" style="height: 200px">
-                <span class="d-none d-lg-block">BeginnersFBA</span>
+                <span class="d-none d-lg-block">FBAbeginners</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
 
-
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
+
+                @if (   Auth::user()->country == "Pakistan" || 
+                        Auth::user()->country == "United Kingdom" || 
+                        Auth::user()->country == "United Kingdom" ||
+                        Auth::user()->country == "United States of America" ||
+                        Auth::user()->country == "India" ||
+                        Auth::user()->country == "United Arab Erimates" ||
+                        Auth::user()->country == "Spain" ||
+                        Auth::user()->country == "France"
+                    )
+                <!-- Country Flag Section -->
+                <li class="nav-item">
+                    <!-- Replace the SVG content with your actual country flag SVG -->
+                    <a href="#" class="nav-link m-0 p-1">
+                        <img src="{{ URL('assets/countriesSvg/'.$countrySvg.'.svg') }}" alt="Flag"
+                            style="width: 34px; height: 34px;">
+                    </a>
+                </li>
+                <!-- End Country Flag Section -->
+                @endif
+
 
                 <li class="nav-item dropdown pe-3">
 
@@ -81,7 +101,7 @@
                         <img src="{{ URL('homeAssets/wp-content/uploads/2021/02/BeginnersFba.png') }}" alt="Profile"
                             class="">
                         <i class="bi bi-chevron-down ms-2 pt-3"></i>
-                    </a><!-- End Profile Iamge Icon -->
+                    </a><!-- End Profile Image Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">

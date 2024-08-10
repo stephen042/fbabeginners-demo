@@ -49,7 +49,12 @@ Route::prefix('users')->group(function () {
 
         // all user-auth route goes here
         Route::get('/', function () {
-            return view('users.index');
+
+            $countrySvg = str_replace(' ', '', Auth::user()->country);
+
+            return view('users.index',[
+                'countrySvg' => $countrySvg,
+            ]);
         })->name('dashboard');
 
         Route::get('/add-product', function () {

@@ -82,8 +82,9 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Country</th>
                                     <th scope="col">email</th>
-                                    <th scope="col">Registered on</th>
+                                    <th scope="col">Approved on</th>
                                     <th scope="col">Balance</th>
                                     <th scope="col">Action</dth>
                                 </tr>
@@ -93,6 +94,7 @@
                                 <tr>
                                     <th scope="row">{{ $item+1}}</th>
                                     <td>{{ $user->name}}</td>
+                                    <td>{{ $user->country}}</td>
                                     <td>{{ $user->email}}</td>
                                     <td>{{ date('Y/M/d h:i a', strtotime($user->created_at)) }}</td>
                                     <td>${{ number_format($user->account_bal) }}</td>

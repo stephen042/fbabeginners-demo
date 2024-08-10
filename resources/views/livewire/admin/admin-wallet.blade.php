@@ -16,6 +16,10 @@
             <input type="text" class="form-control" id="inputEthereum" wire:model="ethereum">
         </div>
         <div class="col-12">
+            <label for="inputEthereum" class="form-label">PayPal</label>
+            <input type="text" class="form-control" id="inputPayPal" wire:model="paypal">
+        </div>
+        <div class="col-12">
             <label for="inputCashApp" class="form-label">Cash App</label>
             <input type="text" class="form-control" id="inputCashApp" wire:model="cash_app">
         </div>

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
+            $table->string('country');
             $table->string('watch_training_before_applying');
             $table->string('budget_to_invest');
             $table->longText('struggle_growing_business');

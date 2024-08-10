@@ -63,7 +63,7 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="{{ URL('homeAssets/wp-content/uploads/2021/02/FbaBeginners.png') }}" alt="Profile"
+                        <img src="{{ URL('homeAssets/wp-content/uploads/2021/02/BeginnersFba.png') }}" alt="Profile"
                             class="">
                         <i class="bi bi-chevron-down ms-2 pt-3"></i>
                     </a><!-- End Profile Iamge Icon -->

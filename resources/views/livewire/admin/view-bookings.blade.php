@@ -6,6 +6,10 @@
             <input type="text" value="{{$bookings->name}}" class="form-control" disabled>
         </div>
         <div class="col-12">
+            <label for="inputNumber">Country</label>
+            <input type="text" value="{{$bookings->country}}" class="form-control" disabled>
+        </div>
+        <div class="col-12">
             <label for="inputNumber">email</label>
             <input type="text" value="{{$bookings->email}}" class="form-control" disabled>
         </div>
