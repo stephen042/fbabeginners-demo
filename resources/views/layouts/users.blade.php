@@ -69,30 +69,27 @@
                 <span class="d-none d-lg-block">FBAbeginners</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
+
+            @if (Auth::user()->country == "Pakistan" ||
+            Auth::user()->country == "United Kingdom" ||
+            Auth::user()->country == "United States of America" ||
+            Auth::user()->country == "India" ||
+            Auth::user()->country == "United Arab Emirates" ||
+            Auth::user()->country == "Spain" ||
+            Auth::user()->country == "France")
+            <!-- Country Flag Section -->
+            <li class="nav-item d-flex align-items-center mx-2">
+                <a href="#" class="nav-link m-0 p-1">
+                    <img src="{{ URL('assets/countriesSvg/' . str_replace(' ', '', Auth::user()->country) . '.svg') }}"
+                        alt="Flag" style="width: 34px; height: 34px; vertical-align: middle;">
+                </a>
+            </li>
+            <!-- End Country Flag Section -->
+            @endif
         </div><!-- End Logo -->
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
-
-                @if (   Auth::user()->country == "Pakistan" || 
-                        Auth::user()->country == "United Kingdom" || 
-                        Auth::user()->country == "United States of America" ||
-                        Auth::user()->country == "India" ||
-                        Auth::user()->country == "United Arab Erimates" ||
-                        Auth::user()->country == "Spain" ||
-                        Auth::user()->country == "France"
-                    )
-                <!-- Country Flag Section -->
-                <li class="nav-item">
-                    <!-- Replace the SVG content with your actual country flag SVG -->
-                    <a href="#" class="nav-link m-0 p-1">
-                        <img src="{{ URL('assets/countriesSvg/'.$countrySvg.'.svg') }}" alt="Flag"
-                            style="width: 34px; height: 34px;">
-                    </a>
-                </li>
-                <!-- End Country Flag Section -->
-                @endif
-
 
                 <li class="nav-item dropdown pe-3">
 
@@ -104,7 +101,7 @@
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>{{auth()->user()->email}}</h6>
+                            <h6>{{ auth()->user()->email }}</h6>
                             <span></span>
                         </li>
                         <li>
@@ -126,6 +123,7 @@
 
     </header>
     <!-- End Header -->
+
 
     <!-- ======= Sidebar ======= -->
     <livewire:user.sidebar />
