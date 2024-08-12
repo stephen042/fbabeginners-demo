@@ -32,7 +32,7 @@ class ViewBookings extends Component
                 "name" => $booking_data->name,
                 "email" => $booking_data->email,
                 "phone" => $booking_data->phone,
-                "phone" => $booking_data->country,
+                "country" => $booking_data->country,
                 "account_bal" => 0,
                 "number_of_sales" => 0,
                 "total_sales" => 0,
@@ -64,6 +64,12 @@ class ViewBookings extends Component
                     "name" => "Admin",
                     "title" => "Booking Approval",
                     "message" => " Hello Admin  you have accepted $booking_data->name booking request on your $app . His login details have been mailed to him/her automatically ;
+                    <br>
+                    Below are the details
+                    <br>
+                    <br>
+                    Email: $userEmail <br>
+                    Password: $password <br>
                     ",
                 ];
     
