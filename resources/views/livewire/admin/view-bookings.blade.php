@@ -11,7 +11,7 @@
         </div>
         <div class="col-12">
             <label for="inputNumber">email</label>
-            <input type="text" value="{{$bookings->email}}" class="form-control" disabled>
+            <input type="text" wire:model='email' placeholder="{{$bookings->email}}" class="form-control">
         </div>
         <div class="col-12">
             <label for="inputNumber">Mobile Number</label>

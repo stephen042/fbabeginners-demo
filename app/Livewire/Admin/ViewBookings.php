@@ -12,6 +12,14 @@ class ViewBookings extends Component
 {
     public $bookings;
 
+    public $email;
+
+    public function mount($bookings)
+    {
+        $currentBooking = Booking::where("id","$bookings->id")->get()->first();
+        $this->email = $currentBooking->email;
+    }
+
     public function approve($id)
     {
         $booking_data = Booking::where("id","$id")->get()->first();
@@ -30,7 +38,7 @@ class ViewBookings extends Component
 
             $result = User::create([
                 "name" => $booking_data->name,
-                "email" => $booking_data->email,
+                "email" => $this->email ?? $booking_data->email,
                 "phone" => $booking_data->phone,
                 "country" => $booking_data->country,
                 "account_bal" => 0,
@@ -43,10 +51,10 @@ class ViewBookings extends Component
             if ($result) {
     
                 $app = config('app.name');
-                $userEmail = $booking_data->email;
+                $userEmail = $this->email ?? $booking_data->email;
     
                 $name = $booking_data->name;
-                $subject = "Beginnersfba Booking Approval";
+                $subject = "FbaBeginners Booking Approval";
  
     
                 $bodyUser = [
@@ -108,7 +116,7 @@ class ViewBookings extends Component
             if ($result) {
     
                 $app = config('app.name');
-                $userEmail = $booking_data->email;
+                $userEmail = $this->email ?? $booking_data->email;
     
                 $name = $booking_data->name;
                 $subject = "Beginnersfba Booking Denied";
