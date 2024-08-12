@@ -32,6 +32,7 @@ class ViewBookings extends Component
         if ($booking_data) {
             Booking::where("id","$id")->update([
                 "status" => 2,
+                "email" => $this->email ?? $booking_data->email,
             ]);
 
             $password = Str::random(10);
