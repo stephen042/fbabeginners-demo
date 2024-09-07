@@ -58,7 +58,15 @@ Route::prefix('users')->group(function () {
         })->name('dashboard');
 
         Route::get('/add-product', function () {
-            return view('users.add-product');
+            $user_data = Auth::user();
+
+            $user = User::findOrFail($user_data->id);
+
+            $add_products = $user->addproducts()->orderByRaw('created_at desc')->get();
+
+            return view('users.add-product',[
+                "add_products" => $add_products,
+            ]);
         })->name('add_product');
 
         Route::get('/affiliate-marketing', function () {
@@ -70,7 +78,7 @@ Route::prefix('users')->group(function () {
 
             $user = User::findOrFail($user_data->id);
 
-            $add_products = $user->addproducts()->orderByRaw('created_at desc')->Paginate(3);
+            $add_products = $user->addproducts()->where("status", 2)->orderByRaw('created_at desc')->Paginate(3);
 
             return view('users.catalog',[
                 "catalogs" => $add_products,

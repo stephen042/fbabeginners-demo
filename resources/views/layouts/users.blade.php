@@ -56,7 +56,7 @@
             background-color: #f8f9fa;
         }
     </style>
-
+    @livewireStyles
 </head>
 
 <body>
@@ -170,7 +170,7 @@
             window.location.href = "{{ route('dashboard') }}";
         }
     </script>
-
+    @livewireScripts
 </body>
 
 </html>

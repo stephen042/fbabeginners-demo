@@ -7,6 +7,7 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Date</th>
+                        <th scope="col">Product stock Status</th>
                         <th scope="col">Product Status</th>
                         <th scope="col">Product Name</th>
                         <th scope="col">Product Image</th>
@@ -14,7 +15,8 @@
                         <th scope="col">Product Quantity</th>
                         <th scope="col">Product Description</th>
                         <th scope="col">Product Ecommerce Platform</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">stock Actions</th>
+                        <th scope="col">status Actions</th>
                         <th scope="col">Delete</th>
                     </tr>
                 </thead>
@@ -28,6 +30,19 @@
                             <span class="text-info">In stock</span>
                             @else
                             <span class="text-danger">Sold Out</span>
+                            @endif
+                        </td>
+                        <td>
+                            @if ($add_product->status == 1)
+                                <span class="badge rounded-pill bg-info p-2">
+                                    {{ config('app.add_product_status')[$add_product->status] }}
+                                </span>
+                            @elseif ($add_product->status == 2)
+                                <span class="badge rounded-pill bg-success p-2">{{ config('app.add_product_status')[$add_product->status] }}</span>
+                            @elseif ($add_product->status == 3)
+                                <span class="badge rounded-pill bg-danger p-2">{{ config('app.add_product_status')[$add_product->status] }}</span>
+                            @else
+                                <span class="badge rounded-pill bg-danger p-2">ERROR Status Unknown :)</span>
                             @endif
                         </td>
                         <td>{{$add_product->productName}}</td>
@@ -68,6 +83,14 @@
                                     wire:confirm='Are you sure you want to declare this product available in stock ?'
                                     class="badge bg-info border m-1">in stock</button></span>
                             {{-- <button type="button" class="btn btn-sm btn-danger m-1">Sold out</button> --}}
+                        </td>
+                        <td>
+                            <span><button type="button" wire:click='acceptStatus({{$add_product->id}})'
+                                wire:confirm='Are you sure you want to Accept this product ?'
+                                class="badge bg-success border m-1">Accept</button></span>
+                                <span><button type="button" wire:click='denyStatus({{$add_product->id}})'
+                                    wire:confirm='Are you sure you want to Deny this product ?'
+                                    class="badge bg-danger border m-1">Deny</button></span>
                         </td>
                         <td>
                             <button type="button" wire:click='delete({{$add_product->id}})'

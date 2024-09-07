@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('price');
             $table->text('ecommercePlatform');
             $table->integer('soldInStock');
+            $table->integer('status');
             $table->timestamps();
         });
     }

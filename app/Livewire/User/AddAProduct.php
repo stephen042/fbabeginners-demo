@@ -49,6 +49,7 @@ class AddAProduct extends Component
             'price' => $this->price,
             'ecommercePlatform' => $this->ecommercePlatform,
             "soldInStock" => 1,
+            "status" => 1,
         ]);
 
         if ($result) {

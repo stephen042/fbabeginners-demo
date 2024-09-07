@@ -31,6 +31,45 @@ class UploadProduct extends Component
         $product->save();
     }
 
+    public function acceptStatus($id)
+    {
+        $productData = AddProduct::findOrFail($id);
+        $user = $this->user;
+        if ($productData->status == 2) {
+            session()->flash('error', 'Product already accepted');
+            return redirect()->route('admin_editUser', [$user->id]);
+        }
+
+        if ($productData) {
+            AddProduct::where("id", "$id")->update([
+                "status" => 2,
+            ]);
+            session()->flash('success', 'Product accepted');
+            return redirect()->route('admin_editUser', [$user->id]);
+        }
+        session()->flash('error', 'An error occurred try again later');
+        return redirect()->route('admin_editUser', [$user->id]);
+    }
+
+    public function denyStatus($id) {
+        $productData = AddProduct::findOrFail($id);
+        $user = $this->user;
+        if ($productData->status == 3) {
+            session()->flash('error', 'Product already denied');
+            return redirect()->route('admin_editUser', [$user->id]);
+        }
+
+        if ($productData) {
+            AddProduct::where("id", "$id")->update([
+                "status" => 3,
+            ]);
+            session()->flash('success', 'Product denied');
+            return redirect()->route('admin_editUser', [$user->id]);
+        }
+        session()->flash('error', 'An error occurred try again later');
+        return redirect()->route('admin_editUser', [$user->id]);
+    }
+
     public function inStock($id)
     {
         $productData = AddProduct::where("id", "$id")->get()->first();
